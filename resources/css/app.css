@@ -20,6 +20,72 @@
     transition-timing-function: linear !important;
     position: relative;
 }
-.swiper-pagination-bullet {
-    background: #4f46e5;
+
+/* Carousel simple products */
+.carousel-simple-products .swiper-pagination-bullet {
+    background: red;
 }
+
+.carousel-simple-products .swiper-button-next::after{
+        color: red;
+        font-size: 12px;
+}
+
+.carousel-simple-products .swiper-button-next:hover::after,
+.carousel-simple-products .swiper-button-next:focus::after{
+        color: white;
+    }
+
+.carousel-simple-products .swiper-button-prev::after{
+        color: red;
+        font-size: 12px;
+}
+
+.carousel-simple-products .swiper-button-prev:hover::after,
+.carousel-simple-products .swiper-button-prev:focus::after{
+        color: white;
+    }
+
+
+/* Carousel multiple categories */
+.carousel-multiple-categories .swiper-button-next::after{
+        color: red;
+        font-size: 12px;
+}
+
+.carousel-multiple-categories .swiper-button-next:hover::after,
+.carousel-multiple-categories .swiper-button-next:focus::after{
+        color: white;
+    }
+
+.carousel-multiple-categories .swiper-button-prev::after{
+        color: red;
+        font-size: 12px;
+}
+
+.carousel-multiple-categories .swiper-button-prev:hover::after,
+.carousel-multiple-categories .swiper-button-prev:focus::after{
+        color: white;
+    }
+
+
+/* Carousel multiple categories */
+.carousel-multiple-offers .swiper-button-next::after{
+        color: red;
+        font-size: 12px;
+}
+
+.carousel-multiple-offers .swiper-button-next:hover::after,
+.carousel-multiple-offers .swiper-button-next:focus::after{
+        color: white;
+    }
+
+.carousel-multiple-offers .swiper-button-prev::after{
+        color: red;
+        font-size: 12px;
+}
+
+.carousel-multiple-offers .swiper-button-prev:hover::after,
+.carousel-multiple-offers .swiper-button-prev:focus::after{
+        color: white;
+    }
