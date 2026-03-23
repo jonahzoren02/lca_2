@@ -2,9 +2,9 @@ import "./bootstrap";
 
 var swiperSimpleProducts = new Swiper(".carousel-simple-products", {
     loop: true,
-    autoplay: {
+    /* autoplay: {
         delay: 2500,
-    },
+    }, */
     pagination: {
         el: ".carousel-simple-products .swiper-pagination",
         clickable: true,
@@ -26,15 +26,23 @@ var swiperMultipleCategories = new Swiper(".carousel-multiple-categories", {
         nextEl: ".carousel-multiple-categories .swiper-button-next",
         prevEl: ".carousel-multiple-categories .swiper-button-prev",
     },
+    breakpoints: {
+        1024: {
+            slidesPerView: 8,
+        },
+        640: {
+            slidesPerView: 6,
+        },
+    },
 });
 
 var swiperMultipleOffers = new Swiper(".carousel-multiple-offers", {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 7,
-    autoplay: {
+    /* autoplay: {
         delay: 3000,
-    },
+    }, */
     navigation: {
         nextEl: ".carousel-multiple-offers .swiper-button-next",
         prevEl: ".carousel-multiple-offers .swiper-button-prev",

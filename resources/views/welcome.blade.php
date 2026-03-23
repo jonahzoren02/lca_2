@@ -13,7 +13,7 @@
 
     <!-- Terceros -->
     <!-- PageDone -->
-    {{-- <link href="../path/to/src/pagedone.css" rel="stylesheet"/> --}}
+    {{-- <link href="../path/to/src/pagedone.css" rel="stylesheet" /> --}}
     <!--Swiper--><!-- Carousel -->
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <!-- FontAwesome -->
@@ -30,622 +30,729 @@
 </head>
 
 <body>
-    <header>
-        <nav class="bg-red-500 text-white">
-            <div class="flex flex-row justify-between items-center p-3 h-14">
-                <div>
-                    <button data-collapse-toggle="navbar-main">
-                        <i class="fa-solid fa-bars text-lg"></i>
-                    </button>
-                </div>
-                <div>
-                    <img src="{{ asset('img/logo_lca.jpg') }}" class="aspect-auto h-8" alt="Web LCA Logo" />
-                </div>
-                <div>
-                    <button class="relative">
-                        <i class="fa-solid fa-cart-plus text-lg pr-4"></i>
-                        <div class="absolute -top-2 end-0 w-4 h-4 bg-blue-500 rounded-full">
-                            <p class="text-xs font-bold">7</p>
+    <div class="relative max-w-7xl mx-auto">
+        <header class="sticky top-0 z-50">
+            <!-- Main menu -->
+            <nav>
+                <div class="flex flex-row justify-between items-center p-3 h-14 bg-red-600 text-white sm:h-16">
+                    <div class="lg:hidden sm:block">
+                        <button data-collapse-toggle="navbar-main">
+                            <i class="fa-solid fa-bars text-lg sm:text-2xl"></i>
+                        </button>
+                    </div>
+                    <div class="sm:h-16 xl:ml-6">
+                        <img src="{{ asset('img/logo_lca.jpg') }}" class="aspect-auto h-8 sm:h-full"
+                            alt="Web LCA Logo" />
+                    </div>
+                    <div class="max-w-xl hidden lg:block">
+                        <form>
+                            <div class="flex shadow-xs rounded-base">
+                                <select
+                                    class="w-48 text-black rounded-tl-full rounded-bl-full border-none focus:ring-0">
+                                    <option selected>Categoría</option>
+                                    <option value="option1">Categoria 1</option>
+                                    <option value="option2">Categoria 2</option>
+                                    <option value="option3">Categoria 3</option>
+                                    <option value="option4">Categoria 4</option>
+                                    <option value="option5">Categoria 5</option>
+                                    <option value="option6">Categoria 6</option>
+                                    <option value="option7">Categoria 7</option>
+                                </select>
+                                <div class="border-r-2 border-red-600"></div>
+                                <input type="text"
+                                    class="w-96 rounded-tr-full border-none rounded-br-full text-black pr-6 focus:ring-0 focus:outline-hidden placeholder:text-body"
+                                    placeholder="Buscar...">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="flex flex-row gap-4 mr-6">
+                        <div class="hidden xl:block ">
+                            <button class="flex justify-center items-center gap-2">
+                                <i class="fa-solid fa-user text-lg sm:text-2xl"></i>
+                                <p class="text-base">Ingresar/Registrar</p>
+                            </button>
                         </div>
-                    </button>
-                </div>
-            </div>
-
-
-            <div id="navbar-main" class="hidden fixed start-0 top-14 bg-white shadow-md h-screen w-7/12 z-50">
-                <ul class="mx-6 my-3 flex flex-col gap-2">
-                    <li class="border-b border-gray-500 py-1">
-                        <a href="#" class="text-black">Inicio</a>
-                    </li>
-                    <li class="border-b border-gray-500 py-1">
-                        <a href="#" class="text-black">Productos</a>
-                    </li>
-                    <li class="border-b border-gray-500 py-1">
-                        <a href="#" class="text-black">Servicios</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-    </header>
-
-    <!-- Hero -->
-    <div class="m-2">
-
-        <!-- Carousel simple - Products -->
-        <div class="w-full relative">
-            <div class="swiper carousel-simple-products swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
-                            <div class="pt-4">
-                                <h2 class="text-2xl text-red-700">Mejora tu automóvil</h2>
-                                <p class="mt-3 text-gray-500">El repuesto de tu automóvil es un beneficio de la oferta
-                                    del mes</p>
-                            </div>
-                            <div class="flex items-center justify-center h-2/4 w-full">
-                                <img src="{{ asset('img/repuesto_1.jpg') }}" class="h-full object-cover" />
-                            </div>
-                            <div class="flex justify-between">
-                                <div class="mb-8 flex flex-col gap-1 text-sm">
-                                    <h2>Luces delanteras</h2>
-                                    <p>TOYOTA 2022 Camry</p>
+                        <div class="hidden sm:block">
+                            <button>
+                                <i class="fa-solid fa-heart-circle-plus text-lg sm:text-2xl"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="relative">
+                                <i class="fa-solid fa-cart-plus text-lg sm:text-2xl"></i>
+                                <div class="absolute -top-2 -end-2 w-4 h-4 bg-blue-500 rounded-full sm:-top-1">
+                                    <p class="text-xs font-bold">7</p>
                                 </div>
-                                <div class="flex items-end mr-4">
-                                    <button
-                                        class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <span>Ver producto</span>
-                                    </button>
-                                </div>
-                            </div>
+                            </button>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
-                            <div class="pt-4">
-                                <h2 class="text-2xl text-red-700">Mejora tu automóvil</h2>
-                                <p class="mt-3 text-gray-500">El repuesto de tu automóvil es un beneficio de la oferta
-                                    del mes</p>
-                            </div>
-                            <div class="flex items-center justify-center h-2/4 w-full">
-                                <img src="{{ asset('img/repuesto_2.jpg') }}" class="h-full object-cover" />
-                            </div>
-                            <div class="flex justify-between">
-                                <div class="mb-8 flex flex-col gap-1 text-sm">
-                                    <h2>Luces delanteras</h2>
-                                    <p>TOYOTA 2022 Camry</p>
-                                </div>
-                                <div class="flex items-end mr-4">
-                                    <button
-                                        class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <span>Ver producto</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
-                            <div class="pt-4">
-                                <h2 class="text-2xl text-red-700">Mejora tu automóvil</h2>
-                                <p class="mt-3 text-gray-500">El repuesto de tu automóvil es un beneficio de la oferta
-                                    del mes</p>
-                            </div>
-                            <div class="flex items-center justify-center h-2/4 w-full">
-                                <img src="{{ asset('img/repuesto_3.jpg') }}" class="h-full object-cover" />
-                            </div>
-                            <div class="flex justify-between">
-                                <div class="mb-8 flex flex-col gap-1 text-sm">
-                                    <h2>Luces delanteras</h2>
-                                    <p>TOYOTA 2022 Camry</p>
-                                </div>
-                                <div class="flex items-end mr-4">
-                                    <button
-                                        class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <span>Ver producto</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
-                            <div class="pt-4">
-                                <h2 class="text-2xl text-red-700">Mejora tu automóvil</h2>
-                                <p class="mt-3 text-gray-500">El repuesto de tu automóvil es un beneficio de la oferta
-                                    del mes</p>
-                            </div>
-                            <div class="flex items-center justify-center h-2/4 w-full">
-                                <img src="{{ asset('img/repuesto_4.jpg') }}" class="h-full object-cover" />
-                            </div>
-                            <div class="flex justify-between">
-                                <div class="mb-8 flex flex-col gap-1 text-sm">
-                                    <h2>Luces delanteras</h2>
-                                    <p>TOYOTA 2022 Camry</p>
-                                </div>
-                                <div class="flex items-end mr-4">
-                                    <button
-                                        class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <span>Ver producto</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
-                            <div class="pt-4">
-                                <h2 class="text-2xl text-red-700">Mejora tu automóvil</h2>
-                                <p class="mt-3 text-gray-500">El repuesto de tu automóvil es un beneficio de la oferta
-                                    del mes</p>
-                            </div>
-                            <div class="flex items-center justify-center h-2/4 w-full">
-                                <img src="{{ asset('img/repuesto_5.jpg') }}" class="h-full object-cover" />
-                            </div>
-                            <div class="flex justify-between">
-                                <div class="mb-8 flex flex-col gap-1 text-sm">
-                                    <h2>Luces delanteras</h2>
-                                    <p>TOYOTA 2022 Camry</p>
-                                </div>
-                                <div class="flex items-end mr-4">
-                                    <button
-                                        class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <span>Ver producto</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-                <div class="flex items-center gap-8 lg:justify-start justify-center">
-                    <button id="slider-button-left"
-                        class="swiper-button-prev w-2 h-8 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !left-5 hover:bg-red-600 focus:bg-red-600"
-                        data-carousel-prev>
-                    </button>
-                    <button id="slider-button-right"
-                        class="swiper-button-next w-2 h-8 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
-                        data-carousel-next>
-                    </button>
+
+                <div id="navbar-main" class="hidden fixed start-0 top-14 bg-white shadow-md h-screen w-96 z-50">
+                    <div class="flex justify-center w-full h-20 border-gray-600 border-b-2 bg-red-600">
+                        <img src="{{ asset('img/logo_lca.jpg') }}" class="aspect-auto" alt="Web LCA Logo" />
+                    </div>
+                    <div class="relative w-full flex justify-center my-3">
+                        <form action="">
+                            <input type="text" class="block w-80" placeholder="Buscar...">
+                            <button class="absolute right-12 top-1"><i
+                                    class="fa-solid fa-magnifying-glass fa-flip-horizontal text-gray-500 text-2xl"></i></button>
+                        </form>
+                    </div>
+                    <ul class="mx-6 my-3 flex flex-col gap-2">
+                        <li class="border-b border-gray-500 py-1">
+                            <a href="#" class="text-black">Inicio</a>
+                        </li>
+                        <li class="border-b border-gray-500 py-1">
+                            <a href="#" class="text-black">Productos</a>
+                        </li>
+                        <li class="border-b border-gray-500 py-1">
+                            <a href="#" class="text-black">Servicios</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="swiper-pagination !bottom-[5rem]"></div>
-            </div>
+            </nav>
+        </header>
+
+        <!-- Submenu -->
+        <div class="bg-gray-200 mx-auto max-w-5xl rounded-b-xl hidden lg:block">
+            <ul class="mx-6 flex justify-around gap-6">
+                <li class="py-1 px-4 hover:bg-gray-500 group rounded-md">
+                    <a href="#" class="text-black group-hover:text-white">Inicio</a>
+                </li>
+                <li class="py-1 px-4 hover:bg-gray-500 group rounded-md">
+                    <a href="#" class="text-black group-hover:text-white">Productos</a>
+                </li>
+                <li class="py-1 px-4 hover:bg-gray-500 group rounded-md">
+                    <a href="#" class="text-black group-hover:text-white">Servicios</a>
+                </li>
+                <li class="py-1 px-4 hover:bg-gray-500 group rounded-md">
+                    <a href="#" class="text-black group-hover:text-white">Nosotros</a>
+                </li>
+                <li class="py-1 px-4 hover:bg-gray-500 group rounded-md">
+                    <a href="#" class="text-black group-hover:text-white">Contacto</a>
+                </li>
+            </ul>
         </div>
 
-        <!-- Carousel multiple - Categories-->
-        <div class="w-full relative -mt-10">
-            <div class="swiper carousel-multiple-categories swiper-container relative">
-                <div class="swiper-wrapper mb-16">
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-hammer text-2xl"></i>
+        <main>
+            <!-- Hero -->
+            <div class="m-2">
+                <!-- Carousel simple - Products -->
+                <div class="relative w-full">
+                    <div class="swiper carousel-simple-products swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide bg-gray-200 rounded-2xl shadow-lg shadow-black-400 ">
+                                <div class="h-[30rem] px-4 max-w-4xl lg:mx-auto">
+                                    <div class="pt-4">
+                                        <h2 class="text-2xl sm:text-3xl text-red-700">Mejora tu automóvil</h2>
+                                        <p class="mt-3 sm:mb-4 text-gray-500">El repuesto de tu automóvil es un
+                                            beneficio de la oferta
+                                            del mes</p>
+                                    </div>
+                                    <div class="lg:flex lg:h-[68%] lg:gap-10 h-[30rem]">
+                                        <div class="flex items-center justify-center h-2/4 w-full sm:mb-4 lg:h-full">
+                                            <img src="{{ asset('img/repuesto_1.jpg') }}"
+                                                class="h-full object-cover lg:w-full" />
+                                        </div>
+                                        <div class="flex lg:flex-col lg:justify-normal justify-between lg:w-1/3">
+                                            <div class="mb-8 flex flex-col gap-1 text-sm sm:text-base">
+                                                <h2 class="text-red-500 lg:font-bold lg:text-lg">Luces delanteras</h2>
+                                                <p class="hidden lg:block text-justify"">Descripcion: Lorem ipsum,
+                                                    dolor
+                                                    sit amet consectetur adipisicing elit. Ad natus vitae quia laborum
+                                                    eius vel ratione id voluptates alias nobis obcaecati, sapiente, cum
+                                                    ab. Eos corrupti autem pariatur asperiores qui.</p>
+                                                <p class="lg:mt-2 lg:text-bold">TOYOTA 2022 Camry</p>
+                                            </div>
+                                            <div class="flex items-end mr-4 lg:mr-0 lg:justify-center lg:-mt-4">
+                                                <button
+                                                    class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                    <span class="transition-all duration-500 sm:text-xl">Ver
+                                                        producto</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
+                                    <div class="pt-4">
+                                        <h2 class="text-2xl sm:text-3xl text-red-700">Mejora tu automóvil</h2>
+                                        <p class="mt-3 sm:mb-4 text-gray-500">El repuesto de tu automóvil es un
+                                            beneficio de la oferta
+                                            del mes</p>
+                                    </div>
+                                    <div class="flex items-center justify-center h-2/4 w-full sm:mb-4">
+                                        <img src="{{ asset('img/repuesto_2.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="mb-8 flex flex-col gap-1 text-sm sm:text-base">
+                                            <h2>Luces delanteras</h2>
+                                            <p>TOYOTA 2022 Camry</p>
+                                        </div>
+                                        <div class="flex items-end mr-4">
+                                            <button
+                                                class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <span class="transition-all duration-500 sm:text-xl">Ver
+                                                    producto</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
+                                    <div class="pt-4">
+                                        <h2 class="text-2xl sm:text-3xl text-red-700">Mejora tu automóvil</h2>
+                                        <p class="mt-3 sm:mb-4 text-gray-500">El repuesto de tu automóvil es un
+                                            beneficio de la oferta
+                                            del mes</p>
+                                    </div>
+                                    <div class="flex items-center justify-center h-2/4 w-full sm:mb-4">
+                                        <img src="{{ asset('img/repuesto_3.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="mb-8 flex flex-col gap-1 text-sm sm:text-base">
+                                            <h2>Luces delanteras</h2>
+                                            <p>TOYOTA 2022 Camry</p>
+                                        </div>
+                                        <div class="flex items-end mr-4">
+                                            <button
+                                                class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <span class="transition-all duration-500 sm:text-xl">Ver
+                                                    producto</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
+                                    <div class="pt-4">
+                                        <h2 class="text-2xl sm:text-3xl text-red-700">Mejora tu automóvil</h2>
+                                        <p class="mt-3 sm:mb-4 text-gray-500">El repuesto de tu automóvil es un
+                                            beneficio de la oferta
+                                            del mes</p>
+                                    </div>
+                                    <div class="flex items-center justify-center h-2/4 w-full sm:mb-4">
+                                        <img src="{{ asset('img/repuesto_4.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="mb-8 flex flex-col gap-1 text-sm sm:text-base">
+                                            <h2>Luces delanteras</h2>
+                                            <p>TOYOTA 2022 Camry</p>
+                                        </div>
+                                        <div class="flex items-end mr-4">
+                                            <button
+                                                class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <span class="transition-all duration-500 sm:text-xl">Ver
+                                                    producto</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-gray-200 rounded-2xl h-[30rem] shadow-lg shadow-black-400 px-4">
+                                    <div class="pt-4">
+                                        <h2 class="text-2xl sm:text-3xl text-red-700">Mejora tu automóvil</h2>
+                                        <p class="mt-3 sm:mb-4 text-gray-500">El repuesto de tu automóvil es un
+                                            beneficio de la oferta
+                                            del mes</p>
+                                    </div>
+                                    <div class="flex items-center justify-center h-2/4 w-full sm:mb-4">
+                                        <img src="{{ asset('img/repuesto_5.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="mb-8 flex flex-col gap-1 text-sm sm:text-base">
+                                            <h2>Luces delanteras</h2>
+                                            <p>TOYOTA 2022 Camry</p>
+                                        </div>
+                                        <div class="flex items-end mr-4">
+                                            <button
+                                                class="flex items-center gap-2 bg-red-500 text-white py-1 px-3 rounded-full">
+                                                <i class="fa-solid fa-plus"></i>
+                                                <span class="transition-all duration-500 sm:text-xl">Ver
+                                                    producto</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 1</p>
+                        <div class="flex items-center gap-8 lg:justify-start justify-center">
+                            <button id="slider-button-left"
+                                class="swiper-button-prev w-2 h-8 sm:!w-6 sm:!h-11 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !left-5 hover:bg-red-600 focus:bg-red-600"
+                                data-carousel-prev>
+                            </button>
+                            <button id="slider-button-right"
+                                class="swiper-button-next w-2 h-8 sm:!w-6 sm:!h-11 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
+                                data-carousel-next>
+                            </button>
                         </div>
+                        <div class="swiper-pagination !bottom-[5rem]"></div>
                     </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-paint-roller text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 2</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-bucket text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 3</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-helmet-safety text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 4</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-trowel text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 5</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-wrench text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 6</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-truck-pickup text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 7</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-sheet-plastic text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 8</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-screwdriver-wrench  text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 9</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flex flex-col items-center">
-                        <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
-                            <i class="fa-solid fa-bore-hole   text-2xl"></i>
-                        </div>
-                        <div class="mt-2">
-                            <p class="text-[0.7rem]"> Categoria 10</p>
+                </div>
+
+                <!-- Carousel multiple - Categories-->
+                <div class="max-w-3xl mx-auto">
+                    <div class="w-full relative -mt-10">
+                        <div class="swiper carousel-multiple-categories swiper-container relative">
+                            <div class="swiper-wrapper mb-16">
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-hammer text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 1</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-paint-roller text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 2</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-bucket text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 3</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-helmet-safety text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 4</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-trowel text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 5</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-wrench text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 6</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-truck-pickup text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 7</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-sheet-plastic text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 8</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-screwdriver-wrench  text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 9</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide flex flex-col items-center">
+                                    <div class="bg-indigo-50 w-16 h-16 rounded-full flex justify-center items-center">
+                                        <i class="fa-solid fa-bore-hole   text-2xl"></i>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-[0.7rem]"> Categoria 10</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute flex justify-center items-center m-auto left-0 right-0 bottom-12">
+                                <button id="slider-button-left"
+                                    class="swiper-button-prev !p-2 flex justify-center items-center border border-solid border-red-600  !w-3 !h-8 sm:!w-6 sm:!h-11 transition-all duration-500 rounded-full  hover:bg-red-600 focus:bg-red-600 !left-4 sm:!left-4 !-translate-y-32 sm:!-translate-y-[8.5rem]"
+                                    data-carousel-prev>
+                                </button>
+                                <button id="slider-button-right"
+                                    class="swiper-button-next !p-2 flex justify-center items-center border border-solid border-red-600 !w-3 !h-8 sm:!w-6 sm:!h-11 transition-all duration-500 rounded-full hover:bg-red-600 focus:bg-red-600 !right-5 sm:!right-4 !-translate-y-32 sm:!-translate-y-[8.5rem]"
+                                    data-carousel-next>
+                                </button>
+                            </div>
+                            {{-- <div class="swiper-pagination !bottom-28"></div> --}}
                         </div>
                     </div>
                 </div>
-                <div class="absolute flex justify-center items-center m-auto left-0 right-0 w-fit bottom-12">
-                    <button id="slider-button-left"
-                        class="swiper-button-prev !p-2 flex justify-center items-center border border-solid border-red-600  !w-3 !h-8 transition-all duration-500 rounded-full  hover:bg-red-600 focus:bg-red-600 !-translate-x-44 !-translate-y-32"
-                        data-carousel-prev>
-                    </button>
-                    <button id="slider-button-right"
-                        class="swiper-button-next !p-2 flex justify-center items-center border border-solid border-red-600 !w-3 !h-8 transition-all duration-500 rounded-full hover:bg-red-600 focus:bg-red-600 !translate-x-44 !-translate-y-32"
-                        data-carousel-next>
-                    </button>
-                </div>
-                {{-- <div class="swiper-pagination !bottom-28"></div> --}}
+
             </div>
-        </div>
+
+            <!-- Offer mouth - Advertising -->
+            <div class="flex flex-col h-80 items-center justify-center w-full -mt-24 bg-gray-200 sm:h-[30rem]">
+                <div>
+                    <h2 class="text-2xl text-center text-red-500 font-extrabold">OFERTA DEL MES</h2>
+                    <p class="text-4xl text-center">Aprovecha tus ventajas de la oferta del mes</p>
+                </div>
+            </div>
+
+            <!-- Carousel simple - Products offers-->
+            <div class="mx-2 mt-7">
+                <div class="w-full relative">
+                    <div class="swiper carousel-multiple-offers swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex flex-col gap-2">
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">EQUIPOS</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_1.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">LLAVES</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_2.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide flex flex-col gap-2">
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">PARABRISAS</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_3.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">LOGO</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_4.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide flex flex-col gap-2">
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">LLANTAS</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_5.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">GUARDAPOLVO</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/logo_lca.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-8 lg:justify-start justify-center">
+                            <button id="slider-button-left"
+                                class="swiper-button-prev w-2 h-8 sm:!w-6 sm:!h-11 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
+                                data-carousel-prev>
+                            </button>
+                            <button id="slider-button-right"
+                                class="swiper-button-next w-2 h-8 sm:!w-6 sm:!h-11 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
+                                data-carousel-next>
+                            </button>
+                        </div>
+                        <div class="swiper-pagination !bottom-[5rem]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto or Service- Advertising -->
+            <div class="flex flex-col h-80 items-center justify-center w-full bg-gray-200 sm:h-[30rem]">
+                <div>
+                    <h2 class="text-2xl text-center text-red-500 font-extrabold">PUBLICIDAD PRODUCTO</h2>
+                    <p class="text-4xl text-center">Detalles de la oferta, servicio o producto</p>
+                </div>
+            </div>
+
+            <!-- Carousel simple - Products offers-->
+            <div class="mx-2 mt-7">
+                <div class="w-full relative">
+                    <div class="swiper carousel-multiple-offers swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex flex-col gap-2">
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">EQUIPOS</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_1.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">LLAVES</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_2.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide flex flex-col gap-2">
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">PARABRISAS</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_3.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">LOGO</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_4.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide flex flex-col gap-2">
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">LLANTAS</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/repuesto_5.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-indigo-50 px-2 h-[19rem] sm:h-[26rem]">
+                                    <div class="flex justify-center py-1 sm:py-3">
+                                        <h2 class="text-xl text-red-500 font-bold">GUARDAPOLVO</h2>
+                                    </div>
+                                    <div
+                                        class="flex items-center justify-center h-2/5 sm:h-1/2 transition-all duration-500">
+                                        <img src="{{ asset('img/logo_lca.jpg') }}" class="h-full object-cover" />
+                                    </div>
+                                    <div class="pb-3 text-[0.8rem] sm:text-base sm:pl-3 sm:mt-2">
+                                        <p class="">REPUESTO LUCES DELANTERAS</p>
+                                        <p class="text-gray-400">TOYOTA 2022 Camry</p>
+                                        <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
+                                        <p class="text-red-500 text-base">Precio: S/ 85.00</p>
+                                        <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
+                                            <button class="text-white">Ver Producto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-8 lg:justify-start justify-center">
+                            <button id="slider-button-left"
+                                class="swiper-button-prev w-2 h-8 sm:!w-6 sm:!h-11 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
+                                data-carousel-prev>
+                            </button>
+                            <button id="slider-button-right"
+                                class="swiper-button-next w-2 h-8 sm:!w-6 sm:!h-11 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
+                                data-carousel-next>
+                            </button>
+                        </div>
+                        <div class="swiper-pagination !bottom-[5rem]"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <!-- Footer - Hero -->
+            <div class="bg-gray-300 px-7 flex flex-col justify-start">
+                <div class="w-2/4 my-2">
+                    <img src="{{ asset('img/logo_lca.jpg') }}" class="aspect-auto" alt="Web LCA Logo" />
+                </div>
+                <div>
+                    <p class="text-sm leading-tight">En La casa del Automóvil nos dedicamos a brindar soluciones
+                        exclusivas
+                        para potenciar tu vehículo. Somos especialistas en la comercialización de accesorios diseñados
+                        para
+                        las principales marcas del mercado, garantizando innovación, calidad superior y las últimas
+                        tendencias en tecnología automotriz. Nuestra propuesta está enfocada en ofrecer productos
+                        confiables
+                        que elevan tu experiencia al conducir y reflejan tu estilo.</p>
+                </div>
+                <div class="my-4">
+                    <ul class="flex  gap-3">
+                        <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a
+                                href="#"><i class="fa-brands fa-facebook-f text-white"></i></a></li>
+                        <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a
+                                href="#"><i class="fa-brands fa-instagram text-white"></i></a></li>
+                        <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a
+                                href="#"><i class="fa-brands fa-tiktok text-white"></i></a></li>
+                        <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a
+                                href="#"><i class="fa-brands fa-youtube text-white"></i></a></li>
+                        <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a
+                                href="#"><i class="fa-brands fa-whatsapp text-white"></i></a></li>
+                    </ul>
+                </div>
+                <div class="pb-8">
+                    <h2 class="my-2 font-extrabold">Contacto</h2>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-base"><i class="fa-solid fa-house-user"></i>Jr. Maturín y Jr. Maracaibo,
+                            Ayacucho</p>
+                        <p class="text-base"><i class="fa-regular fa-calendar-days"></i>Lunes a Domingos de 7:00 a
+                            18:00</p>
+                        <p class="text-base">Ventas 01: 994366171</p>
+                        <p class="text-base">Ventas 02: </p>
+                        <p class="text-base">ventas@lacasadelautomovil.com</p>
+                    </div>
+                </div>
+                <div class="border-t border-gray-500 pt-6 mb-4">
+                    Derechos reservados © 2026 Grupo Kayros
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <main>
-        <!-- Offer mouth - Advertising -->
-        <div class="flex flex-col h-80 items-center justify-center w-full -mt-24 bg-gray-200">
-            <div>
-                <h2 class="text-2xl text-center text-red-500 font-extrabold">OFERTA DEL MES</h2>
-                <p class="text-4xl text-center">Aprovecha tus ventajas de la oferta del mes</p>
-            </div>
-        </div>
 
-        <!-- Carousel simple - Products offers-->
-        <div class="mx-2 mt-7">
-            <div class="w-full relative">
-                <div class="swiper carousel-multiple-offers swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide flex flex-col gap-2">
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">EQUIPOS</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_1.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">LLAVES</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_2.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide flex flex-col gap-2">
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">PARABRISAS</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_3.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">LOGO</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_4.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide flex flex-col gap-2">
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">LLANTAS</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_5.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">GUARDAPOLVO</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/logo_lca.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-8 lg:justify-start justify-center">
-                        <button id="slider-button-left"
-                            class="swiper-button-prev w-2 h-8 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
-                            data-carousel-prev>
-                        </button>
-                        <button id="slider-button-right"
-                            class="swiper-button-next w-2 h-8 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
-                            data-carousel-next>
-                        </button>
-                    </div>
-                    <div class="swiper-pagination !bottom-[5rem]"></div>
-                </div>
-            </div>
-        </div>
+    @if (Route::has('login'))
+        <div class="h-14.5 hidden lg:block">Aqui!</div>
+    @endif
 
-        <!-- Producto or Service- Advertising -->
-        <div class="flex flex-col h-80 items-center justify-center w-full bg-gray-200">
-            <div>
-                <h2 class="text-2xl text-center text-red-500 font-extrabold">PUBLICIDAD PRODUCTO</h2>
-                <p class="text-4xl text-center">Detalles de la oferta, servicio o producto</p>
-            </div>
-        </div>
+    <!--Flowbite-->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
-        <!-- Carousel simple - Products offers-->
-        <div class="mx-2 mt-7">
-            <div class="w-full relative">
-                <div class="swiper carousel-multiple-offers swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide flex flex-col gap-2">
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">EQUIPOS</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_1.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">LLAVES</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_2.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide flex flex-col gap-2">
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">PARABRISAS</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_3.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">LOGO</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_4.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide flex flex-col gap-2">
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">LLANTAS</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/repuesto_5.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-indigo-50 px-2 h-[19rem]">
-                                <div class="flex justify-center py-1">
-                                    <h2 class="text-xl text-red-500 font-bold">GUARDAPOLVO</h2>
-                                </div>
-                                <div class="flex items-center justify-center h-2/5">
-                                    <img src="{{ asset('img/logo_lca.jpg') }}" class="h-full object-cover" />
-                                </div>
-                                <div class="pb-3 text-[0.8rem]">
-                                    <p class="">REPUESTO LUCES DELANTERAS</p>
-                                    <p class="text-gray-400">TOYOTA 2022 Camry</p>
-                                    <p class="text-gray-500 line-through">Precio: S/ 100.00</p>
-                                    <p class="text-red-500 text-base">Precio: S/ 85.00</p>
-                                    <div class="flex justify-center items-center bg-red-500 rounded-xl mx-4 my-2">
-                                        <button class="text-white">Ver Producto</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-8 lg:justify-start justify-center">
-                        <button id="slider-button-left"
-                            class="swiper-button-prev w-2 h-8 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
-                            data-carousel-prev>
-                        </button>
-                        <button id="slider-button-right"
-                            class="swiper-button-next w-2 h-8 !p-2 flex justify-center items-center border border-solid border-red-600 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-red-600 focus:bg-red-600"
-                            data-carousel-next>
-                        </button>
-                    </div>
-                    <div class="swiper-pagination !bottom-[5rem]"></div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <!-- Footer - Hero -->
-        <div class="bg-gray-300 px-7 flex flex-col justify-start">
-            <div class="w-2/4 my-2">
-                <img src="{{ asset('img/logo_lca.jpg') }}" class="aspect-auto" alt="Web LCA Logo" />
-            </div>
-            <div>
-                <p class="text-sm leading-tight">En La casa del Automóvil nos dedicamos a brindar soluciones exclusivas
-                    para potenciar tu vehículo. Somos especialistas en la comercialización de accesorios diseñados para
-                    las principales marcas del mercado, garantizando innovación, calidad superior y las últimas
-                    tendencias en tecnología automotriz. Nuestra propuesta está enfocada en ofrecer productos confiables
-                    que elevan tu experiencia al conducir y reflejan tu estilo.</p>
-            </div>
-            <div class="my-4">
-                <ul class="flex  gap-3">
-                    <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a href="#"><i
-                                class="fa-brands fa-facebook-f text-white"></i></a></li>
-                    <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a href="#"><i
-                                class="fa-brands fa-instagram text-white"></i></a></li>
-                    <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a href="#"><i
-                                class="fa-brands fa-tiktok text-white"></i></a></li>
-                    <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a href="#"><i
-                                class="fa-brands fa-youtube text-white"></i></a></li>
-                    <li class="flex justify-center items-center bg-gray-600 w-8 h-8 rounded-full"><a href="#"><i
-                                class="fa-brands fa-whatsapp text-white"></i></a></li>
-                </ul>
-            </div>
-            <div class="pb-8">
-                <h2 class="my-2 font-extrabold">Contacto</h2>
-                <div class="flex flex-col gap-1">
-                    <p class="text-base"><i class="fa-solid fa-house-user"></i>Jr. Maturín y Jr. Maracaibo, Ayacucho</p>
-                    <p class="text-base"><i class="fa-regular fa-calendar-days"></i>Lunes a Domingos de 7:00 a 18:00</p>
-                    <p class="text-base">Ventas 01: 994366171</p>
-                    <p class="text-base">Ventas 02: </p>
-                    <p class="text-base">ventas@lacasadelautomovil.com</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-500 pt-6 mb-4">
-                Derechos reservados © 2026 Grupo Kayros
-            </div>
-        </div>
-        <footer>
-
-            @if (Route::has('login'))
-                <div class="h-14.5 hidden lg:block">Aqui!</div>
-            @endif
-
-            <!--Flowbite-->
-            <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
-
-            <!--PageDone-->
-            {{-- <script src="../path/to/src/pagedone.js"></script> --}}
-            <!--Swiper--><!-- Carousel -->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--PageDone-->
+    {{-- <script src="../path/to/src/pagedone.js"></script> --}}
+    <!--Swiper--><!-- Carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 
