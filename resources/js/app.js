@@ -1,10 +1,13 @@
 import "./bootstrap";
+import 'pagedone/src/js/pagedone.js';
+/* import Swiper from "swiper";
+import "swiper/css"; */
 
 var swiperSimpleProducts = new Swiper(".carousel-simple-products", {
     loop: true,
-    /* autoplay: {
+    autoplay: {
         delay: 2500,
-    }, */
+    },
     pagination: {
         el: ".carousel-simple-products .swiper-pagination",
         clickable: true,
@@ -40,11 +43,16 @@ var swiperMultipleOffers = new Swiper(".carousel-multiple-offers", {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 7,
-    /* autoplay: {
+    autoplay: {
         delay: 3000,
-    }, */
+    },
     navigation: {
         nextEl: ".carousel-multiple-offers .swiper-button-next",
         prevEl: ".carousel-multiple-offers .swiper-button-prev",
     },
+    breakpoints: {
+        1024: {
+            slidesPerView: 3
+        }
+    }
 });

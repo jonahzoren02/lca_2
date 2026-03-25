@@ -1,12 +1,19 @@
-@import "flowbite/src/themes/default";
+@import "tailwindcss";
+@import "pagedone/src/css/pagedone.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@plugin "flowbite/plugin";
-
-@source "../../node_modules/flowbite";
+@theme {
+    --font-arial: "Arial", sans-serif;
+    --animate-wiggle: wiggle 1s ease-in-out infinite;
+    @keyframes wiggle {
+        0%,
+        100% {
+            transform: rotate(-3deg);
+        }
+        50% {
+            transform: rotate(3deg);
+        }
+    };
+}
 
 [x-cloak] {
     display: none;
@@ -26,66 +33,64 @@
     background: red;
 }
 
-.carousel-simple-products .swiper-button-next::after{
-        color: red;
-        font-size: 12px;
+.carousel-simple-products .swiper-button-next::after {
+    color: red;
+    font-size: 12px;
 }
 
 .carousel-simple-products .swiper-button-next:hover::after,
-.carousel-simple-products .swiper-button-next:focus::after{
-        color: white;
-    }
+.carousel-simple-products .swiper-button-next:focus::after {
+    color: white;
+}
 
-.carousel-simple-products .swiper-button-prev::after{
-        color: red;
-        font-size: 12px;
+.carousel-simple-products .swiper-button-prev::after {
+    color: red;
+    font-size: 12px;
 }
 
 .carousel-simple-products .swiper-button-prev:hover::after,
-.carousel-simple-products .swiper-button-prev:focus::after{
-        color: white;
-    }
-
+.carousel-simple-products .swiper-button-prev:focus::after {
+    color: white;
+}
 
 /* Carousel multiple categories */
-.carousel-multiple-categories .swiper-button-next::after{
-        color: red;
-        font-size: 12px;
+.carousel-multiple-categories .swiper-button-next::after {
+    color: red;
+    font-size: 12px;
 }
 
 .carousel-multiple-categories .swiper-button-next:hover::after,
-.carousel-multiple-categories .swiper-button-next:focus::after{
-        color: white;
-    }
+.carousel-multiple-categories .swiper-button-next:focus::after {
+    color: white;
+}
 
-.carousel-multiple-categories .swiper-button-prev::after{
-        color: red;
-        font-size: 12px;
+.carousel-multiple-categories .swiper-button-prev::after {
+    color: red;
+    font-size: 12px;
 }
 
 .carousel-multiple-categories .swiper-button-prev:hover::after,
-.carousel-multiple-categories .swiper-button-prev:focus::after{
-        color: white;
-    }
-
+.carousel-multiple-categories .swiper-button-prev:focus::after {
+    color: white;
+}
 
 /* Carousel multiple categories */
-.carousel-multiple-offers .swiper-button-next::after{
-        color: red;
-        font-size: 12px;
+.carousel-multiple-offers .swiper-button-next::after {
+    color: red;
+    font-size: 12px;
 }
 
 .carousel-multiple-offers .swiper-button-next:hover::after,
-.carousel-multiple-offers .swiper-button-next:focus::after{
-        color: white;
-    }
+.carousel-multiple-offers .swiper-button-next:focus::after {
+    color: white;
+}
 
-.carousel-multiple-offers .swiper-button-prev::after{
-        color: red;
-        font-size: 12px;
+.carousel-multiple-offers .swiper-button-prev::after {
+    color: red;
+    font-size: 12px;
 }
 
 .carousel-multiple-offers .swiper-button-prev:hover::after,
-.carousel-multiple-offers .swiper-button-prev:focus::after{
-        color: white;
-    }
+.carousel-multiple-offers .swiper-button-prev:focus::after {
+    color: white;
+}
